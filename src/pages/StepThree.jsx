@@ -12,12 +12,8 @@ export const StepThree = () => {
               </span>
               <span className="indicator__value">15%</span>
             </div>
-            <div className="indicator__progressbar">
-              <div className="indicator__unit indicator__unit-1 _active"></div>
-              <div className="indicator__unit indicator__unit-2 _active"></div>
-              <div className="indicator__unit indicator__unit-3"></div>
-              <div className="indicator__unit indicator__unit-4"></div>
-            </div>
+            {/* Прогрессбар */}
+            <Progress stepsCount={stepsCount} activeStep={activeStep} />
           </div>
           <div className="question">
             <h2>3. Занимательный вопрос</h2>

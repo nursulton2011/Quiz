@@ -1,6 +1,10 @@
 import React from "react";
+import Progress from "../components/Progress"; // Импорт компонента
 
 export const StepFour = () => {
+  const stepsCount = 4; // Всего шагов
+  const activeStep = 4; // Текущий шаг (StepFour — это 4 шаг)
+
   return (
     <div className="container">
       <div className="wrapper">
@@ -12,12 +16,8 @@ export const StepFour = () => {
               </span>
               <span className="indicator__value">15%</span>
             </div>
-            <div className="indicator__progressbar">
-              <div className="indicator__unit indicator__unit-1 _active"></div>
-              <div className="indicator__unit indicator__unit-2 _active"></div>
-              <div className="indicator__unit indicator__unit-3 _active"></div>
-              <div className="indicator__unit indicator__unit-4"></div>
-            </div>
+            {/* Прогрессбар */}
+            <Progress stepsCount={stepsCount} activeStep={activeStep} />
           </div>
           <div className="question">
             <h2>4. Занимательный вопрос</h2>

@@ -1,7 +1,17 @@
-.a {
-    background-color: red;
-}
-
-.b {
-    background-color: green;
-}
+.indicator__progressbar {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .indicator__unit {
+    width: 20px;
+    height: 20px;
+    background-color: #e0e0e0; /* Неактивный шаг */
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .indicator__unit._active {
+    background-color: #ffc107; /* Активный шаг */
+  }
+  

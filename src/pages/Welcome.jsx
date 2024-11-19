@@ -13,8 +13,8 @@ export const Welcome = () => {
               label="Имя"
               id="username"
               placeholder="Иван Иванов"
-              errorMessage="Поле имени не может быть пустым" />
-
+              errorMessage="Поле имени не может быть пустым" 
+              />
             <Input
               label="Номер телефона"
               id="phone"

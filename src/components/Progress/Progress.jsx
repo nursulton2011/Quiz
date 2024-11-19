@@ -1,10 +1,21 @@
-import React from 'react'
+import React from "react";
+import ""; // Ваши стили
 
-import styles from './Progress.module.css'
+const Progress = ({ stepsCount, activeStep }) => {
+  const steps = Array.from({ length: stepsCount }, (_, index) => index + 1);
 
-export const Progress = ({steps, activeStep}) => {
-    // TODO: Перенести логику прогрессбара сюда
   return (
-    <div className={1 > 2 ? styles.a : styles.b}>Progress</div>
-  )
-}
+    <div className="indicator__progressbar">
+      {steps.map((step) => (
+        <div
+          key={step}
+          className={`indicator__unit ${
+            step <= activeStep ? "_active" : ""
+          }`}
+        ></div>
+      ))}
+    </div>
+  );
+};
+
+export default Progress;
