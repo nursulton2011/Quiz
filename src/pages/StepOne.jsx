@@ -1,6 +1,9 @@
 import React from "react";
+import { Progress } from "../components"; // Импорт компонента
 
 export const StepOne = () => {
+  const stepsCount = 4; // Всего шагов
+  const activeStep = 1; // Текущий шаг (StepFour — это 4 шаг)
   return (
     <div className="container">
       <div className="wrapper">

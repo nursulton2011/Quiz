@@ -1,5 +1,5 @@
 import React from "react";
-import Progress from "../components/Progress"; // Импорт компонента
+import {Progress} from "../components/"; // Импорт компонента
 
 export const StepFour = () => {
   const stepsCount = 4; // Всего шагов

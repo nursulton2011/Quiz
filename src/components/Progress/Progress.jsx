@@ -1,9 +1,7 @@
 import React from "react";
-import ""; // Ваши стили
 
-const Progress = ({ stepsCount, activeStep }) => {
+export const Progress = ({ stepsCount, activeStep }) => {
   const steps = Array.from({ length: stepsCount }, (_, index) => index + 1);
-
   return (
     <div className="indicator__progressbar">
       {steps.map((step) => (
@@ -17,5 +15,3 @@ const Progress = ({ stepsCount, activeStep }) => {
     </div>
   );
 };
-
-export default Progress;

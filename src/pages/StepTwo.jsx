@@ -1,8 +1,11 @@
 import React from "react";
 import { Button } from "../components";
-import ListItem from "./ListItem"; // Импортируем новый компонент
+import { ListItem } from "../components"; // Импортируем новый компонент
+import { Progress } from "../components"; // Импорт компонента
 
 export const StepTwo = () => {
+  const stepsCount = 4; // Всего шагов
+  const activeStep = 2; // Текущий шаг (StepFour — это 4 шаг)
   const answers = [
     {
       id: "8f5ced48-da99-477f-aa62-889eca67ce57",

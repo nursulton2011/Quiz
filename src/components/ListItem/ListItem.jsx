@@ -1,5 +1,7 @@
+import React from "react";
+
 // ListItem.jsx
-const ListItem = ({ id, answer }) => {
+export const ListItem = ({ id, answer }) => {
     return (
       <li className="variant-wrapper">
         <input required type="radio" name={`variant-${id}`} id={`variant-${id}`} />
@@ -7,5 +9,3 @@ const ListItem = ({ id, answer }) => {
       </li>
     );
   };
-  
-  export default ListItem;  
