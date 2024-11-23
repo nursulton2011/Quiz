@@ -34,9 +34,9 @@ export const StepTwo = () => {
               <span className="indicator__description">
                 Скидка за прохождение опроса:
               </span>
-              <span className="indicator__value">15%</span>
+              <span className="indicator__value">{15 * activeStep}%</span>
             </div>
-            {/* Прогрессбар */}
+            {/* Прогрессбар */} 
             <Progress stepsCount={stepsCount} activeStep={activeStep} />
           </div>
           <div className="question">

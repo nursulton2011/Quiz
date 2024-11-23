@@ -13,7 +13,7 @@ export const StepThree = () => {
               <span className="indicator__description">
                 Скидка за прохождение опроса:
               </span>
-              <span className="indicator__value">15%</span>
+              <span className="indicator__value">{15 * activeStep}%</span>
             </div>
             {/* Прогрессбар */}
             <Progress stepsCount={stepsCount} activeStep={activeStep} />
