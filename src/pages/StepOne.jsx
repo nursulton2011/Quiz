@@ -4,6 +4,7 @@ import { Progress } from "../components"; // Импорт компонента
 export const StepOne = () => {
   const stepsCount = 4; // Всего шагов
   const activeStep = 1; // Текущий шаг (StepFour — это 4 шаг)
+
   return (
     <div className="container">
       <div className="wrapper">
@@ -13,7 +14,7 @@ export const StepOne = () => {
               <span className="indicator__description">
                 Скидка за прохождение опроса:
               </span>
-              <span className="indicator__value">15%</span>
+              <span className="indicator__value">{15 * activeStep}%</span>
             </div>
             {/* Прогрессбар */}
             <Progress stepsCount={stepsCount} activeStep={activeStep} />
