@@ -1,17 +1,29 @@
-import React from "react";
+import classNames from "classnames";
 
-export const Progress = ({ stepsCount, activeStep }) => {
-  const steps = Array.from({ length: stepsCount }, (_, index) => index + 1);
+export const Progress = ({ steps, activeStep }) => {
+  // Вынесено наверх
+  const progressPercentage = ((100 / steps) * (activeStep - 1)).toFixed(2);
+
   return (
-    <div className="indicator__progressbar">
-      {steps.map((step) => (
-        <div
-          key={step}
-          className={`indicator__unit ${
-            step <= activeStep ? "_active" : ""
-          }`}
-        ></div>
-      ))}
+    <div className="indicator">
+      <div className="indicator__text">
+        <span className="indicator__description">Прогресс прохождения:</span>
+        <span className="indicator__value">{progressPercentage}%</span>
+      </div>
+      <div className="indicator__progressbar">
+        {Array.from({ length: steps }).map((_, index) => (
+          <div
+            key={index} // Добавлено key
+            className={classNames(
+              `indicator__unit indicator__unit-${index + 1}`,
+              {
+                _active: index < activeStep,
+                _current: index === activeStep - 1, // Активный шаг выделяется
+              }
+            )}
+          />
+        ))}
+      </div>
     </div>
   );
 };
